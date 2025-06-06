@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+         <a href="index.html" class="w3-button w3-round w3-border w3-border-black w3-hover-white w3-hover-border-red w3-margin-right">Back to Website</a>
+        <br>
+         First Number<br>
+        <input type="number" id="Num1"><br>
+        Second Number<br>
+        <input type="number" id="Num2"><br>
+        <div>
+        <button type="button" onclick="calculate('add')">Add (+)</button>
+        <button type="button" onclick="calculate('subtract')">Subtract (-)</button>
+        <button type="button" onclick="calculate('multiply')">Multiply (*)</button>
+        <button type="button" onclick="calculate('divide')">Divide (/)</button>
+        </div>
+        <button id="clear" type="button" onclick="clearFields()">Clear</button>
+        <div id="result" style="display:none;">
+        Result: <span id="Printresult"></span>
+        </div>
+        <script>
+            function calculate(operation) {
+            let num1 = parseInt(document.getElementById('Num1').value);
+            let num2 = parseInt(document.getElementById('Num2').value);
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers in both fields");
+                return;
+            }
+            let result;
+            switch(operation) {
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'subtract':
+                    result = num1 - num2;
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    break;
+                case 'divide':
+                    if (num2 === 0) {
+                        alert("Cannot divide by zero!");
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+            }
+            document.getElementById('Printresult').textContent = result.toFixed(2);
+            document.getElementById('result').style.display = 'block';
+        }
+        function clearFields() {
+            document.getElementById('Num1').value = '';
+            document.getElementById('Num2').value = '';
+            document.getElementById('Printresult').textContent = '';
+            document.getElementById('result').style.display = 'none';
+        }
+    </script>
+    </body>
+</html>

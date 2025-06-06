@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Personal Website</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>
+            body,h1,h2,h3,h4,h5,h6,p {font-family: "Lato", sans-serif;}
+            body{background-color: rgb(211, 211, 211);}
+        </style>
+    </head>
+    <body>
+        
+        <div class="w3-display-container"> 
+            <img src="Background.jpg" alt="Background" style="width:100%; position: relative; height: 500px;">
+            <h1 style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);color: white;text-align: center;background-color: rgba(0, 0, 0, 0.5); padding: 20px;">Welcome to My Personal Website</h1>
+        </div>
+        <div class="w3-content w3-container w3-padding-64" id="about">
+        <div class="w3-container w3-center">
+            <h1><b>About Me</b></h1>
+            <h3><i>My name is CHONG JIUNN MIN.</i></h3>
+            <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <img src="Me.jpg.jpg" alt="Me" class="w3-round w3-image">
+            </div>
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+            <h3>I graduated from <a href="https://ms.wikipedia.org/wiki/Sekolah_Menengah_Kebangsaan_Seri_Alam_2" target="iframe_a">SMK SERI ALAM 2</a> and now I am studying in <a href="https://www.utm.my/" target="iframe_a">UTM</a>. My matric number is A24DW0422 in Section 42. My course is Diploma in Computer Science.</h3>
+            </div>
+            </div>
+        </div>
+        </div>
+        
+        <div class="w3-display-container"> 
+            <img src="Background3.jpg" alt="Background" style="width:100%; position: relative; height: 500px;">
+            <h1 style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);color: white;text-align: center;background-color: rgba(0, 0, 0, 0.5); padding: 20px;">My Interest</h1>
+        </div>
+        <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+        <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+        <img src="photo1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Jojo">
+        </div>
+        <div class="w3-col m3">
+        <img src="photo2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Maomao">
+        </div>
+        <div class="w3-col m3">
+        <img src="photo3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Genshin">
+        </div> </div>
+
+        <p class="w3-wide"><i class="fa fa-gamepad"></i>Online Gaming</p>
+        <div class="w3-row-padding w3-center">
+         <div class="w3-col m3">
+         <img src="Genshin1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Genshin Impact">
+        </div>
+         <div class="w3-col m3">
+         <img src="HOK.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Honor of King">
+        </div></div>
+         
+        <p class="w3-wide"><i class="fa fa-photo"></i>Enjoy Anime</p>
+        <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+        <img src="Maomao.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="maomao">
+        </div>
+        <div class="w3-col m3">
+        <img src="twinstar.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="twinstar">
+        </div></div>
+        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+        </div></div></div>
+        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button..."><i class="fa fa-remove"></i></span>
+        <div class="w3-modal-content...">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="..."></p>
+        </div>
+        </div>
+        
+        <div class="w3-container w3-center w3-padding-16" id="myCV">
+         <h2 class="w3-center w3-padding-16">My CV Link</h2>
+        <a href="cv.html" class="w3-button w3-round w3-border w3-border-black w3-hover-white w3-hover-border-red w3-margin-right">
+        <i class="fa fa-file-text"></i> VIEW CV</a>
+        <a href="Cv.pdf" class="w3-button w3-round w3-border w3-border-black w3-hover-white w3-hover-border-red w3-margin-right" download>
+        <i class="fa fa-download"></i> DOWNLOAD CV</a>
+        </div>
+        
+        <div class="w3-display-container"> 
+            <img src="Background2.jpg" alt="Background" style="width:100%; position: relative; height: 500px;">
+            <h1 style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);color: white;text-align: center;background-color: rgba(0, 0, 0, 0.5); padding: 20px;">Useful Tools</h1>
+        </div>
+          <div class="w3-content w3-container w3-padding-64" id="about">
+        <div class="w3-center w3-container">
+        <a href="SimpleCalculator.html" class="w3-button w3-round w3-border w3-border-black w3-hover-white w3-hover-border-red w3-margin-right">
+        <i class="fa fa-calculator"></i> Simple Calculator Function</a>
+        <a href="BMIChecker.html" class="w3-button w3-round w3-border w3-border-black w3-hover-white w3-hover-border-red w3-margin-right">
+        <i class="fa fa-calculator"></i> BMI Calculator Function</a><br>
+        <a href="IncomeTax.html" class="w3-button w3-round w3-border w3-border-black w3-hover-white w3-hover-border-red w3-margin-right">
+        <i class="fa fa-calculator"></i> Income Tax Calculator Function</a>
+        <a href="UnitConvert.html" class="w3-button w3-round w3-border w3-border-black w3-hover-white w3-hover-border-red w3-margin-right">
+        <i class="fa fa-calculator"></i> Unit Converter Function</a>
+        </div></div>
+
+        
+        <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+         <div class="w3-xlarge w3-section">
+         <i class="fa fa-facebook-official w3-hover-opacity"></i>
+         <i class="fa fa-instagram w3-hover-opacity"></i>
+         <i class="fa fa-snapchat w3-hover-opacity"></i>
+         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+         <i class="fa fa-twitter w3-hover-opacity"></i>
+         <i class="fa fa-linkedin w3-hover-opacity"></i>
+         </div>
+        </footer>
+
+        <script>
+            function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            document.getElementById("caption").innerHTML = element.alt;
+            }
+        </script>
+            
+        
+    </body>
+</html>

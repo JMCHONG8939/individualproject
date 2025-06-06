@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI Checker</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+         <a href="index.html" class="w3-button w3-round w3-border w3-border-black w3-hover-white w3-hover-border-red w3-margin-right">Back to Website</a>
+        <div class="w3-content w3-container w3-padding-64" id="BMI">
+         <h1 class="w3-center w3-padding-16">BMI Checker</h1>
+          <label for="weight">weight (kg):</label>
+        <input type="number" id="weight" placeholder="Insert weight">
+        <br>
+        <label for="height">height (cm):</label>
+        <input type="number" id="height" placeholder="Insert height">
+        <br>
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <br>
+        BMI value:<span id="roundedBMI"></span>
+        <br>
+        BMI Classification:<span id="category"></span>
+        </div>
+
+        <script>
+            function calculateBMI() {
+     
+                const weight = parseFloat(document.getElementById('weight').value);
+                const height = parseFloat(document.getElementById('height').value) / 100; 
+                
+                const bmi = weight / (height * height);
+                
+                let category = "";
+               
+                if (bmi < 18.5) {
+                    category = "Underweight";
+                   
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    category = "Normal weight";
+                    
+                } else if (bmi >= 25 && bmi < 30) {
+                    category = "Overweight";
+                   
+                } else {
+                    category = "Obese";
+                 
+                }
+                document.getElementById('roundedBMI').textContent = bmi.toFixed(1);
+               
+                document.getElementById('category').textContent = category;
+            }
+        </script>
+    </body>
+</html>
